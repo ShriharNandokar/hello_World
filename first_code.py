@@ -7,7 +7,7 @@ def getFileName(filepath):
     return (name[dataindex[2]:dataindex[1]])
 
 def getFileNameIndex(name):
-    newName = str(name).find(".jsx")
+    newName = str(name).find(".txt")
     index = newName
     startEndIndex = [""]
     startEndIndex.append(newName)
@@ -46,7 +46,7 @@ for filename in fileNameData:
             keyword = line[(x+9): findNextBracket(x , line)]
             keyWordArray.append(keyword)
        # print(didFind)
-        file2.write(dataToBeWritten)
+        file2.write("\""+dataToBeWritten"\"")
     for i in keyWordArray:
         keyWordFile.write(i+"\n")
     count= count+1
